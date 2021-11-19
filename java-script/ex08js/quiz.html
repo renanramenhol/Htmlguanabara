@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz do Renan</title>
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var score;
+        score = 0;
+        alert("Bem vindo ao jogo de perguntas e respostas do Renan");
+
+        var q1
+        q1 = prompt("Qual a capital de Minas Gerais?")
+        if(q1 == "Belo Horizonte"){
+            score ++
+            alert("Você acertou " +score )
+            alert("Voce errou " +score ) 
+        }
+
+        var q2
+        q2 = prompt("Qual a capital de Rio Grande do Sul?")
+        if(q2 == "Porto Alegre"){
+            score ++
+            alert("Você acertou " +score )
+        }else{
+            alert("Voce errou " +score ) 
+        }
+
+        var q3
+        q3 = prompt("Qual a capital do Brasil?")
+        if(q3 == "Brasilia"){
+            score ++
+            alert("Você acertou " +score )
+        }else{
+            alert("Voce errou " +score ) 
+        }
+
+        var q4
+        q4 = prompt("Qual a capital do Paraná?")
+        if(q4 == "Curitiba"){
+            score ++
+            alert("Você acertou " +score )
+        }else{
+            alert("Voce errou " +score ) 
+        }
+
+        if (score ==4 ) {
+            alert("Parabéns você acertou tudo, sua pontuação é " +score+" pontos.")
+        }else{
+            alert("Continue tentando para acertar todas, sua pontuação é " +score+" pontos.")
+        }
+    </script>
+</body>
+</html>

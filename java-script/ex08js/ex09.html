@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania</title>
+</head>
+<body>
+    
+    <h1>Sistema de verificação da nacionalidade</h1>
+    Nacionalidade: <input type="text" name="txtpais" id="txtpais">
+                    <input type="button" value="verificar" onclick="validar()">
+        <div id="res">
+
+        </div> 
+        <script>
+            function validar() {
+               
+                var país = 'Brasil' 
+                console.log(`Vivendo em ${país}`)
+                if (país == 'Brasil') {
+                 console.log('Você é Brasileiro!')
+                } else {
+                console.log('Você é Estrangeiro!')
+                  }
+            }
+        </script>
+</body>
+</html>
+
+
