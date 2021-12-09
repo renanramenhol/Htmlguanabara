@@ -7,6 +7,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-size: 93,75%;
+}
+
 body {
     background-color: #f0f2f5;
     font-family: 'Poppins',sans-serif;
@@ -49,10 +54,104 @@ a:hover {
     margin-bottom: .8rem;
 }
 
+.button.cancel {
+        color: #e92929;
+        border: 2px #e92929 solid;
+        border-radius: .25rem;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: .6;
+}
+
+.button.cancel:hover{
+    opacity: 1;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: white;
+    background-color: #49aa26;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3dd705
+}
+
 header{
     background-color: #2d4a22;
     padding: 2rem 0 10rem;
     text-align: center;
+}
+
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0,0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background-color: #f0f2f5;
+    padding: 2.4rem;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+
+}
+
+#form {
+    max-width: 500px;
+
+}
+
+#form h2 {
+    margin-top: 0;
+}
+
+input {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+.input-group {
+    margin-top: 0.8rem;
+
+}
+
+.input-group small {
+  opacity: .4;
+
+}
+
+.input-group.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+    width: 48%;
 }
 
 footer{
@@ -104,9 +203,18 @@ footer{
     color: white;
 }
 
+#transaction {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
 #data-table {
+   
     width: 100%;
     border-spacing: 0 0.5rem;
+    color: gray;
+    
 }
 
 table th {
@@ -142,3 +250,13 @@ td.expense {
     color: red;
 }
    
+@media (min-width:800px) {
+    html {
+        font-size: 87,5%;
+    }
+    #balance {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}
