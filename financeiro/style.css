@@ -155,10 +155,12 @@ input {
 }
 
 footer{
+    position: absolute;
     text-align: center;
     padding: 4rem 0 2rem;
     color: var(--darkblue);
     opacity: 0.8;
+    left: 45%;
 }
 
 #logo {

@@ -18,13 +18,13 @@ const Storage = {
     }
 }
 
- const transactions = [
+ /*const transactions = [
     { description: 'Luz', amount: -50000, date: '23/01/2021', },
     { description: 'Website', amount: 500000, date: '23/01/2021', },
     { description: 'Internet', amount: -20000, date: '23/01/2021', },
     { description: 'App', amount: 200000, date: '23/01/2021', }
 ]
-
+*/
 
 const Transaction = {
     all: Storage.get(),
@@ -65,7 +65,7 @@ const Transaction = {
 const Utils = {
     formatAmount(value) {
         value = Number(value) * 100
-        return value
+        return Math.round(value)
     },
 
     formatDate(date) {
