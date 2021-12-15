@@ -155,7 +155,7 @@ input {
 }
 
 footer{
-    position: absolute;
+    
     text-align: center;
     padding: 4rem 0 2rem;
     color: var(--darkblue);
