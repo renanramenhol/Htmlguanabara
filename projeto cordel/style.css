@@ -1,0 +1,46 @@
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 4rem;
+}
+
+header h1 {
+    
+    margin-bottom: 20px;
+    font-size: 6rem;
+}
+
+header p a {
+    font-size: 1.5rem;
+    text-decoration: none;
+  
+}
+
+a {
+   color: white;
+}
+
+
+main {
+
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+   
+}
+
+footer p a {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
