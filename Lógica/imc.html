@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <script>
+        function pulalinha() {
+            document.write("<br> <br>");
+        }
+        
+        function mostrar(frase) {
+            document.write(frase);
+            pulalinha();
+        }
+
+        function calculaImc(peso , altura) {
+          var imc = peso / (altura * altura);
+            return imc;
+        }
+ 
+        var imcRenan = calculaImc(92, 1.82);
+    
+       var imcDani = calculaImc(66, 1.62);
+
+       
+       
+       mostrar("O imc da Dani é " + Math.round(imcDani));
+       mostrar(" O imc do Renan é " + Math.round(imcRenan));
+       mostrar(" A soma dos 2 Imc's é " + Math.round(imcDani + imcRenan))
+
+    </script> 
+</body>
+</html>
