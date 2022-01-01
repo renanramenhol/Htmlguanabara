@@ -29,6 +29,18 @@
        var calculo = calculaImc(pesoInf, alturaInf);
 
        mostrar(nome + " seu imc é " + Math.round(calculo) )
+
+       if (calculo > 18.5 && calculo < 30) {
+           mostrar("Seu peso está excelente.")
+       }
+
+       if (calculo < 18.5) {
+           mostrar("Você está abaixo do peso ideal.")
+       }
+
+       if (calculo > 30) {
+           mostrar("Você está acima do peso ideal.")
+       }
     </script> 
 </body>
 </html>
