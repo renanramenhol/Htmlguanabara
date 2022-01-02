@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>copa</title>
+    <title>contador</title>
 </head>
 <body>
     <script>
@@ -17,15 +17,14 @@
             pulalinha();
         }
 
-        var limite = parseInt(prompt("Qual a data limite?"))
+        var contador = 0;
 
-        var anoCopa = 1930;
-        while (anoCopa <= limite) {
-           mostrar("teve Copa em " + anoCopa);
-             anoCopa = anoCopa + 4;
-        }
-        
-       mostrar("fim");
+        while(contador <= 100) {
+           
+        contador = contador + 1; // incrementa de dois em dois
+        mostrar(contador);
+    }
+    mostrar("FIM");
 
     </script> 
 </body>

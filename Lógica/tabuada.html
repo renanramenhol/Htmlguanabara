@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>copa</title>
+    <title>tabuada</title>
 </head>
 <body>
     <script>
@@ -17,15 +17,24 @@
             pulalinha();
         }
 
-        var limite = parseInt(prompt("Qual a data limite?"))
+       
+        for(var multiplicador = 1; multiplicador <= 10 ; multiplicador++) {
 
-        var anoCopa = 1930;
-        while (anoCopa <= limite) {
-           mostrar("teve Copa em " + anoCopa);
-             anoCopa = anoCopa + 4;
-        }
+            mostrar(7 * multiplicador);
         
-       mostrar("fim");
+        }
+         mostrar("fim");
+
+          for( var i = 0; i < 10; i++ ) {
+     alert( "O resultado é " + (2 * i) );
+ }
+
+    // var i = 0
+
+    while(i <= 10) {
+            mostrar(2 * i);
+            i++;
+    }
 
     </script> 
 </body>
