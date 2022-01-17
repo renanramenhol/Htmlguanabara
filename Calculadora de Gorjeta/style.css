@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: lightgray;
+ }
+
+ header {
+    height: auto;
+    width: 360px;
+    margin: 1px auto;
+    background: #f7f7f7;
+    border-radius: 20px 20px 0 0 ;
+    background: #38a95a;
+    
+    
+   
+ }
+
+ header h1 {
+     text-align: center;
+     font-size: 2.1em;
+     padding: 15px ;
+ }
+
+ main {
+     height: auto;
+     width: 360px;
+     text-align: center;
+     margin: 3% auto;
+     background-color: rgb(150, 38, 38);
+     
+     
+ }
+
+ p {
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 10px ;
+    color: white;
+ }
+
+  input {
+      font-size: 1em;
+      padding: 10px;
+      border-radius: 10px;
+  }
+
+   option, select {
+       color: black;
+       font-size: 1.3em;
+       padding: 10px;
+       border-radius: 10px ;
+   }
+
+  button {
+    font-size: 3em;
+    margin: 10px;
+    background-color: chartreuse;
+    border: 4px solid white;
+    border-radius: 10px;
+  }
+
+  button:hover {
+    font-size: 3.4em;
+    margin: 10px;
+    background-color: chartreuse;
+    border: 4px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 4px 3px 3px rgba(0, 0, 0, 0.679);
+    font-weight: bold;
+  }
+
+  footer {
+    
+     width: 360px;
+     text-align: center;
+     margin: 3% auto;
+     background-color: rgb(150, 38, 38);
+    font-size: 3em;
+    border-radius: 0 0 20px 20px;
+  }
