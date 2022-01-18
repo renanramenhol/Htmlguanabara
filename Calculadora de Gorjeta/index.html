@@ -20,9 +20,9 @@
     <main>
         <form>
             <p>Quanto custou o jantar ?</p>
-            <p>R$ <input placeholder="Total da Conta" id="total-conta" type="text"> </p>
+            <p>R$ <input placeholder="Total da Conta" id="total-conta" type="text" > </p>
             <p>Qual a taxa de serviço ?</p>
-            <select name="" id="total-serviço">
+            <select  name="" id="taxa-serviço">
                 <option disabled selected value="0">-- Defina a Taxa --</option>
                 <option value="0.3">30% - Taxa de Serviço</option>
                 <option value="0.2">20% - Taxa de Serviço</option>
@@ -41,6 +41,7 @@
     </main>
 
     <footer id="valor-calculado">
+        <p class="rodape">Valor por pessoa</p>
         <sup>R$</sup><span id="valor-por-cabeca">0.00</span>
         <small id="each">cada</small>
     </footer>
