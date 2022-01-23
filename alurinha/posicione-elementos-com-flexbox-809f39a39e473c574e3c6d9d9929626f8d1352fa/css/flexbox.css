@@ -42,3 +42,37 @@
     flex-wrap: wrap;
     height: 260px;
 }
+
+
+
+.videoSobre-sobre {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+.videoSobre-sobre-list {
+    flex-grow: 1;
+}
+
+.videoSobre-video {
+    flex-grow: 1;
+    
+   
+}
+
+.videoSobre .container {
+    display: flex;
+}
+
+.conteudoPrincipal-cursos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+.conteudoPrincipal-cursos-link {
+        width: 23%;
+        margin-bottom: 1%;
+    }
+    
