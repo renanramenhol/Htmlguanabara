@@ -2,10 +2,10 @@
 
 
 
- distanciaEntrePontos(x1, y1, x2, y2);
+distanciaEntrePontos(x1, y1, x2, y2);
 
 
-function distanciaEntrePontos(x1, y1, x2, y2){
+function distanciaEntrePontos(x1, y1, x2, y2) {
     let d;
     let primeiraSubtracao;
     let primeiraPotencia;
@@ -37,9 +37,10 @@ let valy1 = document.getElementById('valory1').value;
 let valy2 = document.getElementById('valory2').value;
 
 
-   
-   document.getElementById('resposta').onclick = function() {
-   distanciaEntrePontos();
+
+document.getElementById().onclick = function () {
+    distanciaEntrePontos();
 }
 
 document.getElementById("resposta").innerHTML = d;
+
