@@ -1,25 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inteiros</title>
-</head>
-<body>
+    <style>
+        body {
+            background-color: blueviolet;
+        }
 
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 3em;
+            font-style: italic;
+        }
+
+        div {
+            text-align: center;
+            font-size: 3em;
+
+        }
+
+        input {
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px;
+        }
+
+        label {
+            color: white;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            
+
+        }
+
+        button:hover {
+            font-size: 20px;
+            background-color: violet;
+            transition: 1s;
+        }
+
+        #resposta  {
+            color: yellow;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Informe 3 números</h1>
+
+    <div>
+        <label for="valora">Valor A</label>
+        <input id="valora" placeholder="Digite o valor de A" type="number">
+
+        <label for="valorb">Valor B</label>
+        <input id="valorb" placeholder="Digite o valor de B" type="number">
+
+        <label for="valorc">Valor C</label>
+        <input id="valorc" placeholder="Digite o valor de C" type="number">
+    </div>
+
+   
+        <div>
+            <button onclick="calcular()">Calcular</button>
+
+            <span id="resposta"></span>
+        </div>
+  
 
     <script>
-        let A = 4;
-        let B = 2;
-        let C = -5;
 
-        let R = (A + B) ** 2;
-        let S = (B + C) ** 2;
+        function calcular() {
 
-        let D = (R + S ) / 2;
+            let A = document.getElementById('valora').value;
 
-        console.log(D);
+            let B = document.getElementById('valorb').value;
+
+            let C = document.getElementById('valorc').value;
+
+            let R = (parseInt(A) + parseInt(B)) ** 2;
+
+            let S = (parseInt(B) + parseInt(C)) ** 2;
+
+            let D = (R + S) / 2;
+
+            console.log(D);
+
+            document.getElementById("resposta").innerHTML = D.toFixed(2);
+        }
+
+
+
+
     </script>
 </body>
+
 </html>
