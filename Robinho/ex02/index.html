@@ -39,7 +39,7 @@
             margin: 10px;
             border-radius: 5px;
             cursor: pointer;
-            
+
 
         }
 
@@ -49,7 +49,7 @@
             transition: 1s;
         }
 
-        #resposta  {
+        #resposta {
             color: yellow;
 
         }
@@ -70,13 +70,13 @@
         <input id="valorc" placeholder="Digite o valor de C" type="number">
     </div>
 
-   
-        <div>
-            <button onclick="calcular()">Calcular</button>
 
-            <span id="resposta"></span>
-        </div>
-  
+    <div>
+        <button onclick="calcular()">Calcular</button>
+
+        <span id="resposta"></span>
+    </div>
+
 
     <script>
 
@@ -93,8 +93,6 @@
             let S = (parseInt(B) + parseInt(C)) ** 2;
 
             let D = (R + S) / 2;
-
-            console.log(D);
 
             document.getElementById("resposta").innerHTML = D.toFixed(2);
         }

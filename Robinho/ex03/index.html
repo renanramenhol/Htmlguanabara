@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias vividos</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+
+        div {
+            height: 250px;
+            width: 310px;
+            background-color: cadetblue;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button,
+        h1,
+        input,
+        label {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        span {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Dias vividos</h1>
+        <label for="idadeinput">Digite sua idade : </label>
+        <input id="idadeinput" placeholder="Digite sua idade" type="number">
+        <button onclick="calcular()">Calcular</button>
+        <span id="resposta"></span>
+    </div>
+
+    <script>
+        function calcular() {
+
+            let idade = document.getElementById('idadeinput').value;
+
+            let ano = parseInt(365);
+
+            let dias = ano * parseInt(idade);
+
+            document.getElementById("resposta").innerHTML = dias
+        }
+
+
+
+    </script>
+</body>
+
+</html>
