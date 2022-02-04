@@ -36,6 +36,7 @@
             font-size: 1.5em;
             margin: 10px;
         }
+
         h1 {
             text-align: center;
             padding: 10px;
@@ -70,11 +71,15 @@
 
             let terceiraNota = document.getElementById('terceiraNota').value;
 
-            let media = (parseInt(primeiraNota) + parseInt(segundaNota) + parseInt(terceiraNota)) / 3;
+            let media = (parseFloat(primeiraNota) + parseFloat(segundaNota) + parseFloat(terceiraNota)) / 3;
 
-            
 
-            document.getElementById("resposta").innerHTML = media.toFixed(1) + " é sua média";
+            if (media < 5) {
+                document.getElementById("resposta").innerHTML = media.toFixed(1) + " é sua média. Você foi reprovado "
+            } else {
+                document.getElementById("resposta").innerHTML = media.toFixed(1) + " é sua média. Você foi Aprovado "
+            }
+
         }
 
 
