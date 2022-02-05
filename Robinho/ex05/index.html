@@ -7,29 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Média</title>
     <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
         body {
             background-color: rgba(165, 42, 42, 0.734);
         }
 
         div {
+            position: absolute;
+            background-color: darkgray;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 15px;
+            padding: 15px;
             height: 350px;
             width: 500px;
-            background-color: darkgray;
             color: white;
             font-size: 1.5em;
-            margin: auto;
+
         }
 
-        input {
+        .ajuste {
+            display: inline-block;
             padding: 10px;
             margin: 5px;
+            width: 210px;
+           align-items: center;
+           border-radius: 10px;
         }
 
-        button,
-        input,
-        label {
+        button {
             padding: 10px;
             margin: 5px;
+            width: 200px;
+            display: block;
+            border-radius: 8px;
+           
+
         }
 
         span {
@@ -39,24 +56,30 @@
 
         h1 {
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             margin: 5px;
+            
         }
+
+
+
     </style>
 </head>
 
 <body>
+   
     <div>
+       
         <h1>Média </h1>
 
         <label for="primeiraNota">Digite a primeira nota</label>
-        <input id="primeiraNota" placeholder="Digite sua nota" type="number">
+        <input class="ajuste" id="primeiraNota" placeholder="Digite sua nota" type="number">
 
         <label for="segundaNota">Digite a segunda nota</label>
-        <input id="segundaNota" placeholder="Digite sua nota" type="number">
+        <input class="ajuste" id="segundaNota" placeholder="Digite sua nota" type="number">
 
         <label for="terceiraNota">Digite a terceira nota</label>
-        <input id="terceiraNota" placeholder="Digite sua nota" type="number">
+        <input class="ajuste" id="terceiraNota" placeholder="Digite sua nota" type="number">
 
         <button onclick="calcular()">Calcular</button>
         <span id="resposta"></span>
