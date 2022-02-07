@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor Maior</title>
+    <style>
+        body {
+           text-align: center;
+           font-size: 2em;
+           background-color: aliceblue;
+        }
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+        button {
+            padding: 15px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Qual o Maior Valor </h1>
+
+    <label for="A">Digite o Valor de A</label>
+    <input class="ajuste" id="valorA" placeholder="Digite o valor de A" type="number"> <br>
+
+    <label for="B">Digite o Valor de B</label>
+    <input class="ajuste" id="valorB" placeholder="Digite o valor de B" type="number"> <br>
+
+    <label for="C">Digite o Valor de C</label>
+    <input class="ajuste" id="valorC" placeholder="Digite o valor de C" type="number"> <br>
+
+    <button onclick="calcular()">Resposta</button>
+    <span id="resposta"></span>
+
+    <script>
+            function calcular () {
+                let A = parseFloat(document.getElementById('valorA').value);
+
+                let B = parseFloat(document.getElementById('valorB').value);
+
+                let C = parseFloat(document.getElementById('valorC').value);
+
+               if (A==B && B==C && C==A) {
+                document.getElementById("resposta").innerHTML = " Todos tem valores iguais "
+               }else if (A>B && A>C) {
+                document.getElementById("resposta").innerHTML = " A tem o valor maior que B e C. "
+               }else if (B>C) {
+                document.getElementById("resposta").innerHTML = " B tem o valor maior que A e C. "
+               }else {
+                document.getElementById("resposta").innerHTML = " C tem o valor maior que B e A. "
+               }
+            }
+    </script>
+</body>
+
+</html>
