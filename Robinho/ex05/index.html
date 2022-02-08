@@ -11,8 +11,10 @@
             margin: 0%;
             padding: 0%;
         }
+
         body {
             background-color: rgba(165, 42, 42, 0.734);
+            display: flexbox;
         }
 
         div {
@@ -20,56 +22,62 @@
             background-color: darkgray;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             border-radius: 15px;
             padding: 15px;
-            height: 350px;
+            height: 510px;
             width: 500px;
             color: white;
             font-size: 1.5em;
+            display: flex;
+            align-items: center; 
+           /* justify-content: center; */
+            flex-direction: column;
 
         }
 
         .ajuste {
             display: inline-block;
             padding: 10px;
-            margin: 5px;
+            margin: 10px;
             width: 210px;
-           align-items: center;
-           border-radius: 10px;
+            align-items: center;
+            border-radius: 10px;
         }
 
         button {
             padding: 10px;
-            margin: 5px;
-            width: 200px;
+            margin: 10px;
+            width: 235px;
             display: block;
             border-radius: 8px;
-           
+            background-color: aqua;
+        }
 
+        button:hover {
+            background-color: aquamarine;
+            transition: 1s;
         }
 
         span {
             font-size: 1.5em;
             margin: 10px;
+            text-align: center;
         }
 
         h1 {
             text-align: center;
             padding: 20px;
             margin: 5px;
-            
+
         }
-
-
-
     </style>
 </head>
 
 <body>
-   
+
     <div>
-       
+
         <h1>Média </h1>
 
         <label for="primeiraNota">Digite a primeira nota</label>
@@ -88,20 +96,29 @@
     <script>
         function calcular() {
 
-            let primeiraNota = document.getElementById('primeiraNota').value;
+            let primeiraNota = document.getElementById('primeiraNota').value || 0;
 
-            let segundaNota = document.getElementById('segundaNota').value;
+            let segundaNota = document.getElementById('segundaNota').value || 0;
 
-            let terceiraNota = document.getElementById('terceiraNota').value;
+            let terceiraNota = document.getElementById('terceiraNota').value || 0;
 
-            let media = (parseFloat(primeiraNota) + parseFloat(segundaNota) + parseFloat(terceiraNota)) / 3;
+            let validarCampo = primeiraNota == ' ' && segundaNota == ' ' && terceiraNota == ' ';
 
+            if (validarCampo == true) {
+                alert('Preencha os Campos.')
 
-            if (media < 6) {
-                document.getElementById("resposta").innerHTML = media.toFixed(1) + " é sua média. Você foi reprovado "
             } else {
-                document.getElementById("resposta").innerHTML = media.toFixed(1) + " é sua média. Você foi Aprovado "
+                let media = (parseFloat(primeiraNota) + parseFloat(segundaNota) + parseFloat(terceiraNota)) / 3;
+
+
+                if (media < 6) {
+                    document.getElementById("resposta").innerHTML = media.toFixed(1) + " é sua média. Você foi reprovado "
+                } else {
+                    document.getElementById("resposta").innerHTML = media.toFixed(1) + " é sua média. Você foi Aprovado "
+                }
             }
+
+
 
         }
 
