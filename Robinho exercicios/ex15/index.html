@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor Maior</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2em;
+            background-color: blueviolet;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 15px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Par ou Impar ? </h1>
+    <h1>Positivo ou Negativo</h1>
+
+    <label for="numerodigitado">Digite um número</label>
+    <input id="numerodigitado" placeholder="Digite um número" type="number"> <br>
+
+    <button onclick="calcular()">Resposta</button>
+    <span id="resposta"></span>
+
+    <script>
+        function calcular() {
+            let A = parseInt(document.getElementById('numerodigitado').value || 0);
+            let par = A % 2;
+
+
+            if (par == 0 && A >= 0) {
+                document.getElementById("resposta").innerHTML = `${A} é par e positivo .`
+            } else if (par == 0 && A < 0) {
+                document.getElementById("resposta").innerHTML = `${A} é par e negativo .`
+            } else if (par != 0 && A >= 0) {
+                document.getElementById("resposta").innerHTML = `${A} é Impar e positivo .`
+            } else if (par != 0 && A < 0) {
+                document.getElementById("resposta").innerHTML = `${A} é Impar e negativo .`
+            }
+
+        }
+    </script>
+</body>
+
+</html>
