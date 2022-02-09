@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor Maior</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2em;
+            background-color: chocolate;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 15px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Categoria de Natação </h1>
+
+    <label for="idade">Digite a idade do nadador</label>
+    <input id="idade" placeholder="Digite a idade" type="number"> <br>
+
+
+
+    <button onclick="calcular()">Resposta</button>
+    <span id="resposta"></span>
+
+    <script>
+        function calcular() {
+            let idade = parseFloat(document.getElementById('idade').value || 0);
+
+            if(idade < 5){
+                document.getElementById("resposta").innerHTML = `Você tem ${idade} anos, você é nadador da categoria Fraldinha.`
+            } else if (idade >= 5 && idade <= 7) {
+                document.getElementById("resposta").innerHTML = `Você tem ${idade} anos, você é nadador da categoria Infantil A.`
+            } else if (idade >= 8 && idade <= 10) {
+                document.getElementById("resposta").innerHTML = `Você tem ${idade} anos, você é nadador da categoria Infantil B.`
+            } else if (idade >= 11 && idade <= 13) {
+                document.getElementById("resposta").innerHTML = `Você tem ${idade} anos, você é nadador da categoria Juvenil A.`
+            } else if (idade >= 14 && idade <= 17) {
+                document.getElementById("resposta").innerHTML = `Você tem ${idade} anos, você é nadador da categoria Juvenil B.`
+            } else if (idade >= 18 && idade <60) {
+                document.getElementById("resposta").innerHTML = `Você tem ${idade} anos, você é nadador da categoria Adulto.`
+            } else if (idade >= 60) {
+                document.getElementById("resposta").innerHTML = `Você tem ${idade} anos, você é nadador da categoria Sênior.`
+            }
+        }
+    </script>
+</body>
+
+</html>

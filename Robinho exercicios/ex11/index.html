@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor Maior</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2em;
+            background-color: blueviolet;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 15px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>É multiplo ? </h1>
+
+    <label for="A">Digite o Valor de A</label>
+    <input id="valorA" placeholder="Digite o valor de A" type="number"> <br>
+
+    <label for="B">Digite o Valor de B</label>
+    <input id="valorB" placeholder="Digite o valor de B" type="number"> <br>
+
+
+
+    <button onclick="calcular()">Resposta</button>
+    <span id="resposta"></span>
+
+    <script>
+        function calcular() {
+            let A = parseFloat(document.getElementById('valorA').value || 0);
+
+            let B = parseFloat(document.getElementById('valorB').value || 0);
+
+            let CampoVazio = A == ' ' || B == ' ';
+
+            if (CampoVazio == true) {
+                alert('Preencha os Campos.')
+            } else {
+                if (A % B == 0) {
+                    document.getElementById("resposta").innerHTML = `${A} é multiplo de ${B}.`
+                } else {
+                    document.getElementById("resposta").innerHTML = `${A} não é multiplo de ${B}.`
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
