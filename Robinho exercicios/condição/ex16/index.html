@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor Maior</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2em;
+            background-color: blueviolet;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 15px;
+            margin: 20px;
+            border-radius: 8px;
+                      
+        }
+        table {
+            width: 500px;
+            height: 400px;
+            border: 6px solid red;
+            border-collapse: collapse;
+
+        }
+        tr {
+            border: 1px solid red;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        th {
+            border: 1px solid red;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        td {
+            border: 1px solid red;
+            padding: 8px;
+        }
+
+        #container {
+            display: inline;
+        }
+        #selecione {
+           justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body id="container">
+
+    <div id="selecione">
+
+        <h1>Gauchinha</h1>
+        <h2>Faça seu pedido</h2>
+        <label for="codigo">Digite o código do lanche </label>
+        <input id="codigo" placeholder="Digite o código do lanche" type="number"> <br>
+        <label for="quant">Digite a quantidade do lanche</label>
+        <input id="quant" placeholder="Digite a quantidade do lanche" type="number"> <br>
+        <button onclick="calcular()">Calcular</button>
+        <span id="resposta"></span>
+    </div>
+
+    <table>
+        <tr>
+            <th>Especificação</th>
+            <th>Código</th>
+            <th>Preço</th>
+        </tr>
+        <tr>
+            <td>Cachorro Quente</td>
+            <td>100</td>
+            <td>1,20</td>
+        </tr>
+        <tr>
+            <td>Bauru Simples</td>
+            <td>101</td>
+            <td>1,30</td>
+        </tr>
+        <tr>
+            <td>Bauru com Ovo</td>
+            <td>102</td>
+            <td>1,50</td>
+        </tr>
+        <tr>
+            <td>Hambúrguer</td>
+            <td>103</td>
+            <td>1,20</td>
+        </tr>
+        <tr>
+            <td>Cheeseburguer</td>
+            <td>104</td>
+            <td>1,30</td>
+        </tr>
+        <tr>
+            <td>Refrigerante</td>
+            <td>105</td>
+            <td>1,00</td>
+        </tr>
+    </table>
+
+    <script>
+        function calcular() {
+            let codigo = parseFloat(document.getElementById('codigo').value || 0);
+
+            let quantidade = parseFloat(document.getElementById('quant').value || 0);
+
+            let CampoVazio = codigo == ' ' || quantidade == ' ';
+
+            let CachorroQuente = 1.20 * quantidade;
+            let Bauru = 1.30 * quantidade;
+            let BauruOvo = 1.50 * quantidade;
+            let Hamburguer = 1.20 * quantidade;
+            let Cheeseburguer = 1.30 * quantidade;
+            let Reftigerante = 1.00 * quantidade;
+
+            let cod100 = 100;
+            let cod101 = 101;
+            let cod102 = 102;
+            let cod103 = 103;
+            let cod104 = 104;
+            let cod105 = 105;
+
+            if (CampoVazio == true) {
+                alert('Preencha os Campos.')
+            } else {
+                if (cod100 == codigo) {
+                    document.getElementById("resposta").innerHTML = `O preço do seu Cachorro Quente ficou ${CachorroQuente.toFixed(2)} reais.`
+                } else if (cod101 == codigo) {
+                    document.getElementById("resposta").innerHTML = `O preço do seu Bauru Simples ficou ${Bauru.toFixed(2)} reais.`
+                } else if (cod102 == codigo) {
+                    document.getElementById("resposta").innerHTML = `O preço do seu Bauru com Ovo ficou ${BauruOvo.toFixed(2)} reais.`
+                } else if (cod103 == codigo) {
+                    document.getElementById("resposta").innerHTML = `O preço do seu Cachorro Quente ficou ${Hamburguer.toFixed(2)} reais.`
+                } else if (cod104 == codigo) {
+                    document.getElementById("resposta").innerHTML = `O preço do seu Hamburguer ficou ${Cheeseburguer.toFixed(2)} reais.`
+                } else if (cod105 == codigo) {
+                    document.getElementById("resposta").innerHTML = `O preço do seu Refrigerante ficou ${Reftigerante.toFixed(2)} reais.`
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
