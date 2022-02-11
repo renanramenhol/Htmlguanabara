@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor Maior</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2em;
+            background-color: blueviolet;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 15px;
+            margin: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Digite um número de 10 a 100 ? </h1>
+
+    <label for="numero">Digite um número</label>
+    <input id="numero" placeholder="Digite um número" type="number"> <br>
+
+
+
+    <button onclick="calcular()">Resposta</button>
+    <span id="resposta"></span>
+
+    <script>
+        function calcular() {
+            let num = parseFloat(document.getElementById('numero').value || 0);
+
+
+
+            let CampoVazio = num == ' ';
+
+            if (CampoVazio == true) {
+                alert('Preencha o Campo.');
+            } else {
+                if (num < 10 || num > 100) {
+                    alert('Valor fora do especificado');
+                } else {
+                    for (contador = 1; contador <= num; contador ++) {
+                        document.getElementById("resposta").innerHTML = contador;
+                        console.log(contador);
+                    }
+
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
