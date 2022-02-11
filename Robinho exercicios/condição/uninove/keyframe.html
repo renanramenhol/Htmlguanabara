@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+          <title>Animações</title>
+        <style>
+        /* Código da animação */
+            @keyframes teste { /* criação do @keyframes com nome teste */
+                    from {background-color: #00F;float: left;}/* início da animação */
+                    to {background-color: #F00;float:right;}/* fim  da animação */
+                    }
+ 
+        /* Elemento que vamos aplicar a animação */
+            div {
+                    width: 300px;
+                    height: 200px;
+                    background-color: #00F;
+                    animation-name: teste;/* vinculação ao @keyframes pelo nome */
+                    animation-duration: 10s;/* tempo da animação */
+                    animation-delay: 5s;
+                    animation-iteration-count: 3;
+                }
+        </style>
+    </head>
+    <body>
+        <div></div>
+ 
+    </body>
+</html>
