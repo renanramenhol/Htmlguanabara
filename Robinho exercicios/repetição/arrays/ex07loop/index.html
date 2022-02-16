@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+    <title>Número</title>
+    <script src="scripty.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <h1>Qual o maior numero ? </h1>
+   
+
+    <label for="numerodigitado">Digite 5 números</label>
+    <input id="numerodigitado" placeholder="Digite o número" type="number"> <br>
+
+    <button onclick="calcular()">Resposta</button>
+    <span id="resposta"></span>
+
+    <script>
+        function calcular() {
+           
+            for (let i = 1; i <= 5; i++) {
+                const valorDigitado = parseInt(document.getElementById('numerodigitado').value='');;
+                lista.push(parseInt(valorDigitado));
+            }
+
+        
+            function getValorMaximo() {
+                let valorMaximo = 0;
+
+                for (let i = 0; i < lista.length; i++) {
+                    if (valorMaximo < lista[i]) {
+                        valorMaximo = lista[i];
+                    }
+                }
+
+                return valorMaximo;
+            }
+            const valorMaximo = getValorMaximo();
+            document.getElementById("resposta").innerHTML = `${lista} números escolhidos .`
+            document.getElementById("resposta").innerHTML = `${valorMaximo} é o maior número da lista .`
+        }
+
+    </script>
 </body>
+
+</body>
+
 </html>
