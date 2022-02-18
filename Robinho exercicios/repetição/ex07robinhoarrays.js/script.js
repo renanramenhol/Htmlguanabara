@@ -19,12 +19,16 @@ for (let i = 1; i <= 5; i++) {
 
 const valorMaximo = getValorMaximo();
 const valorMinimo = getValorMinimo();
-
+const soma = getSoma();
+const media = getMedia();
+const segundoMaior = segMaior();
 
 console.log(`Os números da lista são: ${lista}`);
 console.log(`O maior valor encontrado é ${valorMaximo}`);
 console.log(`O menor valor encontrado é ${valorMinimo}`);
-
+console.log(`A soma  dos valores encontrados são ${soma}`);
+console.log(`A media  dos valores encontrados são ${media}`);
+console.log(`O segundo maior valor encontrado é ${segundoMaior}`);
 
 function getValorMaximo() {
     let valorMaximo = 0;
@@ -44,15 +48,33 @@ function getValorMinimo() {
 
 }
 
-
+function getSoma() {
     let soma = 0;
-    for (let i =0; i < lista.length; i++) {
+    for (let i = 0; i < lista.length; i++) {
         soma += lista[i]
-        media = soma/lista.length
-    }
+        //  media = soma/lista.length
 
-    console.log(`A soma  dos valores encontrados são ${soma}`);
-    console.log(`A media  dos valores encontrados são ${media}`);
+    }
+    return soma
+}
+
+function getMedia() {
+    let soma = 0;
+    let media = 0;
+    for (let i = 0; i < lista.length; i++) {
+        soma += lista[i]
+        media = soma / lista.length
+
+    }
+    return media
+}
+
+function segMaior(){
+    lista.sort((a,b)=>a-b);
+    return lista[3]
+}
+
+
 
 
 
