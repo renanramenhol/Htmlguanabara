@@ -45,7 +45,7 @@
 
 
 
-            let CampoVazio = num == ' ';
+            let CampoVazio = num ;
 
             if (CampoVazio == true) {
                 alert('Preencha o Campo.');
@@ -54,7 +54,7 @@
                     alert('Valor fora do especificado');
                 } else {
                     for (contador = 1; contador <= num; contador ++) {
-                        document.getElementById("resposta").innerHTML = contador;
+                        document.getElementById("resposta").innerHTML = contador++;
                         console.log(contador);
                     }
 
