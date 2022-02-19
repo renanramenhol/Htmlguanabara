@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso Ideal</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2em;
+            background-color: rgb(109, 49, 165);
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 15px;
+            margin: 20px;
+            border-radius: 8px;
+
+        }
+
+        table {
+            width: 500px;
+            height: 400px;
+            border: 6px solid red;
+            border-collapse: collapse;
+
+        }
+
+        tr {
+            border: 1px solid red;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        th {
+            border: 1px solid red;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        td {
+            border: 1px solid red;
+            padding: 8px;
+        }
+
+        #container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #selecione {}
+    </style>
+</head>
+
+<body id="container">
+
+    <div id="selecione">
+
+        <h1>Peso Ideal</h1>
+
+        <h2>Digite o seu sexo</h2>
+        <input id="sexMas" placeholder=">Digite o seu sexo" type="radio"> Masculino
+        <input id="sexFem" placeholder=">Digite o seu sexo" type="radio"> Feminino <br>
+        <label for="altu">Digite a sua altura</label>
+        <input id="altu" placeholder="Digite a sua altura" type="number"> <br>
+        <button onclick="calcular()">Calcular</button>
+        <span id="resposta"></span>
+    </div>
+
+
+    <script>
+        function calcular() {
+            let sexoM = document.getElementById('sexMas').checked;
+            let sexoF = document.getElementById('sexFem').checked;
+
+            let altura = parseFloat(document.getElementById('altu').value);
+
+            let ideal;
+            let CampoVazio = sexoM == false && sexoF == false || altura == ' ';
+
+            if (CampoVazio == true) {
+                alert('Preencha os Campos.')
+            } else {
+                if (sexoM == true) {
+                    ideal = (72.7 * altura) - 58;
+                    document.getElementById("resposta").innerHTML = ` Masculino Peso ideal : ${ideal.toFixed(1)} quilos.`
+                } else {
+                    ideal = (62.1 * altura) - 44.7;
+                    document.getElementById("resposta").innerHTML = `Feminino Peso ideal : ${ideal.toFixed(1)} quilos.`
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
