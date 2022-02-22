@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 1.5em;
+            background-color: honeydew;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 15px;
+            margin: 20px;
+            border-radius: 8px;
+
+        }
+
+        table {
+            width: 600px;
+            height: 400px;
+            border: 6px solid red;
+            border-collapse: collapse;
+
+        }
+
+        tr {
+            border: 1px solid red;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        th {
+            border: 1px solid red;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        td {
+            border: 1px solid red;
+            padding: 8px;
+        }
+
+        #container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+
+<body id="container">
+
+    <div id="selecione">
+
+        <h1>Aumento salárial</h1>
+
+        <label for="valorCargo"> Digite o cargo </label>
+        <input id="valorCargo" placeholder="cargo" type="text"> <br>
+
+        <label for="valSalario"> Salário </label>
+        <input id="valSalario" placeholder="ex 1.750" type="number"> <br>
+
+        <button onclick="calcular()">Total</button>
+        <span id="resposta"></span>
+    </div>
+
+    <table>
+        <tr>
+            <th>cargo</th>
+            <th>Código </th>
+            <th>Percentual</th>
+
+        </tr>
+        <tr>
+            <td>Gerente</td>
+            <td>101</td>
+            <td>10%</td>
+
+        </tr>
+        <tr>
+            <td>Engenheiro</td>
+            <td>102</td>
+            <td>20%</td>
+
+        </tr>
+        <tr>
+            <td>Técnico</td>
+            <td>103</td>
+            <td>30%</td>
+        </tr>
+        <tr>
+            <td>Demais Cargos</td>
+            <td>104</td>
+            <td>40%</td>
+        </tr>
+
+
+    </table>
+
+    <script>
+        function calcular() {
+
+            let pegarCargo = document.getElementById('valorCargo').value;
+            let pegarSalario = parseFloat(document.getElementById('valSalario').value || 0);
+            let CampoVazio = pegarCargo == '' || pegarSalario == '';
+
+
+
+            let Gerente = pegarSalario * 1.1;
+            let Engenheiro = pegarSalario * 1.2;
+            let Tecnico = pegarSalario * 1.3;
+            let DemaisCargos = pegarSalario * 1.4;
+
+            let diferencaGerente = Gerente - pegarSalario;
+            let diferencaEng = Engenheiro - pegarSalario;
+            let diferencaTec = Tecnico - pegarSalario;
+            let diferencaCargos = DemaisCargos - pegarSalario;
+
+
+            if (CampoVazio == true) {
+                alert('Preencha os Campos.')
+            } else {
+                switch (pegarCargo.toUpperCase()) {
+                    case "GERENTE":
+                        document.getElementById("resposta").innerHTML = `Seu salário é ${pegarSalario.toFixed(2)} O novo salário é ${Gerente.toFixed(2)} a diferença é ${diferencaGerente.toFixed(2)} reais.`
+                        break;
+
+                    case "ENGENHEIRO":
+                        document.getElementById("resposta").innerHTML = `Seu salário é ${pegarSalario.toFixed(2)} O novo salário é ${Engenheiro.toFixed(2)} a diferença é ${diferencaEng.toFixed(2)} reais.`
+                        break;
+
+                    case "TECNICO":
+                        document.getElementById("resposta").innerHTML = `Seu salário é ${pegarSalario.toFixed(2)} O novo salário é ${Tecnico.toFixed(2)} a diferença é ${diferencaTec.toFixed(2)} reais.`
+                        break;
+
+
+                    default:
+                        document.getElementById("resposta").innerHTML = `Seu salário é ${pegarSalario.toFixed(2)} O novo salário é ${DemaisCargos.toFixed(2)} a diferença é ${diferencaCargos.toFixed(2)} reais.`
+
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
