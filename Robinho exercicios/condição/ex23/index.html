@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triângulo</title>
+    <style>
+        body {
+            background-color: gainsboro;
+           
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 3em;
+            font-style: italic;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+            font-size: 2em;
+
+        }
+
+        div {
+            text-align: center;
+            font-size: 3em;
+
+        }
+
+        input {
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px;
+        }
+
+        label {
+            color: white;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+
+
+        }
+
+        button:hover {
+            font-size: 20px;
+            background-color: violet;
+            transition: 1s;
+        }
+
+        #resposta {
+            color: navy;
+           
+
+        }
+
+        #teste {
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Triângulo</h1>
+    <p>Informe 3 números</p>
+
+    <div>
+        <label for="valora">Lado A</label>
+        <input id="valora" placeholder="Digite o valor de A" type="number">
+
+        <label for="valorb">Lado B</label>
+        <input id="valorb" placeholder="Digite o valor de B" type="number">
+
+        <label for="valorc">Lado C</label>
+        <input id="valorc" placeholder="Digite o valor de C" type="number">
+    </div>
+
+
+    <div id="teste">
+        <button onclick="calcular()">Calcular</button>
+
+        <span id="resposta"></span>
+        <img id="resposta-img" src="" alt="" srcset="">
+    </div>
+
+
+
+
+    <script>
+
+        function calcular() {
+
+
+
+
+
+            let A = parseInt(document.getElementById('valora').value || 0);
+
+            let B = parseInt(document.getElementById('valorb').value || 0);
+
+            let C = parseInt(document.getElementById('valorc').value || 0);
+
+            let CampoVazio = A == '' || B == '' || C == '';
+
+            if (CampoVazio == true) {
+                alert('Preencha os Campos')
+            } else {
+                if (A + B > C && A + C > B && B + C > A) {
+                    document.getElementById("resposta").innerHTML = `Parabéns você Construiu um triângulo Escaleno `;
+
+                    if (A == B && A == C) {
+                        document.getElementById("resposta").innerHTML = `Parabéns você Construiu um triângulo Equilatero` ;
+                        document.getElementById("resposta-img").src = "img/equilatero.png";
+                    } else if (A == B || A == C || B == C) {
+                        document.getElementById("resposta").innerHTML = `Parabéns você Construiu um triângulo Isósceles `; 
+                        document.getElementById("resposta-img").src = "img/isosceles.png";
+                    } else {
+                        document.getElementById("resposta").innerHTML = `Parabéns você Construiu um triângulo Escaleno `;
+                        document.getElementById("resposta-img").src = "img/escaleno.jpg";
+                    }
+                }
+                else {
+                    document.getElementById("resposta").innerHTML = ` você não tem um triangulo`;
+                    document.getElementById("resposta-img").src = "none";
+                }
+            }
+
+
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
