@@ -44,3 +44,6 @@ document.getElementById().onclick = function () {
 
 document.getElementById("resposta").innerHTML = d;
 
+  let renan = 2*(3+10/5*5)-1;
+  console.log(renan)
+
